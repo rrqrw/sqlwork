@@ -4,6 +4,7 @@
 
 --고객(customer)과 고객의 주문(order)에 관한 데이터를 모두 검색하시오 
 --고객이름으로 정렬(자동으로 그룹화 됨)
+-- 카테시안곱:customer(60)
 select cus.name, ord.saleprice
 from customer cus, orders ord
 where cus.custid = ord.custid
@@ -45,7 +46,7 @@ where cus.custid = ord.custid  -- 기본키 = 외래키
 --고객(customer)과 고객의 주문(order)에 관한 데이터를 모두 검색하시오
 -- 고객이 주문한 도서의 판매가격을 검색하시오 
 select cus.name, ord.saleprice
-from customer cus inner join orders ord
+from customer cus inner join orders ord  ---inner 은 생략가능
     on cus.custid = ord.custid
 order by cus.name;
 
@@ -58,4 +59,6 @@ SELECT cus.name, ord.saleprice
 from customer cus left outer join orders ord 
     on cus.custid = ord.custid
 order by cus.name;
+    
+    
     

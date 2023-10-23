@@ -44,4 +44,9 @@ commit;
 
 drop table employee;
 
+SELECT empname,empid, deptid, SALARY
+
+FROM EMPLOYEE
+
+WHERE DEPT_CODE = 'D9' or DEPT_CODE = 'D6' and SALARY >= 3000000;
 

@@ -51,3 +51,23 @@ where ename = '오상식';
 
 select *from emp;
 
+
+
+-- 반올림 : round (숫자, 자리수 )
+select ename 사원이름,
+       salary 급여,
+       salary/30 일급,
+        round(salary/30,1)결과1, 
+        round(salary/30,0)결과2,
+        round(salary/30,-1)결과3
+from  emp;
+
+select empno,ename,gender,salary
+from  emp 
+where empno = 100 || empno = 101 and  salary  >= 3000000;
+
+SELECT EMP_NAME, EMP_NO, DEPT_CODE, SALARY
+
+FROM EMPLOYEE
+
+WHERE DEPT_CODE == "D9" || DEPT_CODE == "D6"
